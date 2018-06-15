@@ -3,10 +3,10 @@ let mariachis = document.getElementById("mariachis");
 
 
 //referencia a la base de datos
-const ref = firebase.database().ref("Mariachis");
+const ref = firebase.database().ref("mariachis");
 
 // Pull de mariachis
-btnLogin.addEventListener("click", function() {
+btnPull.addEventListener("click", function() {
   console.log("request de Mariachis");
 
 });
@@ -17,5 +17,5 @@ ref.on('value', (data)=>{
 
   let dat = data.val()
 
-  mariachis.innerHTML = dat.mariachis ;
+  mariachis.innerHTML = dat.mariachis;
 })
